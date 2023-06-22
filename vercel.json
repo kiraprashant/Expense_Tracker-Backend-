@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "name": "serverside",
+  "builds": [{ "src": "Server/app.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/server.js" }]
+}
