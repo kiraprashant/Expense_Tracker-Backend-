@@ -5,6 +5,7 @@ const app = express()
 const Port = process.env.Port || 4000
 const ExpenseRoutes = require("../Routes/Expense")
 const ConnectDB = require("../Connection/conn")
+const ExpenseModel = require("../Model/ExpenseModel")
 
 
 app.use(express.json())
