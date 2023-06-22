@@ -20,7 +20,7 @@ app.get("/",async(req,res)=>{
     })
    })
 
-   app.get("/Show",async(req,res)=>{
+   app.post("/Show",async(req,res)=>{
     try{
         const ShowExpense = await ExpenseModel.find({Email:req.body.Email})
         res.json({
@@ -37,7 +37,7 @@ app.get("/",async(req,res)=>{
         msg:"Expense Tracker Added failed"
        })
     }
-    
+
    })
 
 
