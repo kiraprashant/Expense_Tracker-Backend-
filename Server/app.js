@@ -44,7 +44,7 @@ app.get("/Show",async(req,res)=>{
 
 app.listen(Port,()=>{
     ConnectDB()
-    console.log("Server Running...")
+    console.log("Server Running...",Port)
 })
 
 
