@@ -8,6 +8,7 @@ const mongoose = require("mongoose")
 //const url = "mongodb://vercel-admin-user:17sd6WCryK4RgA6n@ac-0gfh2lb-shard-00-00.saxl0go.mongodb.net:27017,ac-0gfh2lb-shard-00-01.saxl0go.mongodb.net:27017,ac-0gfh2lb-shard-00-02.saxl0go.mongodb.net:27017/ExpenseTracker?ssl=true&replicaSet=atlas-12jx0r-shard-0&authSource=admin&retryWrites=true&w=majority"
 
 const url = process.env.MongoDB_URL
+
 const connectDB = () =>{
     console.log("database")
     mongoose.connect(url).then(()=>{
@@ -28,3 +29,8 @@ module.exports = connectDB
 //vercel
 //userName = "vercel-admin-user "
 // "password" = 17sd6WCryK4RgA6n
+
+
+
+// vercel Mongdb
+// mongodb+srv://vercel-admin-user:MdWKySzBo7Zxa4hI@prashantapi.saxl0go.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
