@@ -5,7 +5,7 @@ const app = express()
 const Port = process.env.Port || 4000
 const ExpenseRoutes = require("../Routes/Expense")
 const ConnectDB = require("../Connection/conn")
-
+const ExpenseModel = require("../Model/ExpenseModel")
 
 
 app.use(express.json())
@@ -20,6 +20,25 @@ app.get("/",async(req,res)=>{
        msg:"let me see you can do it or not"
     })
    })
+
+app.post("/Show",async(req,res)=>{
+    try{
+        const ShowExpense = await ExpenseModel.find({})
+        res.json({
+            data:ShowExpense,
+            name:"Expense Tracker Full Data",
+            msg:"List of All Data"
+         })
+
+    }
+    catch(e){
+       console.log(e)
+       res.status(201).json({
+        Success:false,
+        msg:"Expense Tracker Added failed"
+       })
+    }
+})   
 
 
 
